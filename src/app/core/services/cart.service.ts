@@ -42,7 +42,7 @@ export class CartService {
   }
   checkOut(cartId:string|null, orderInfo:object): Observable<any>{
     let currentRoute = window.location.host;
-    return this._HttpClient.post(this.baseUrl + `orders/checkout-session/${cartId}?url=${currentRoute}`,
+    return this._HttpClient.post(this.baseUrl + `orders/checkout-session/${cartId}?url=${currentRoute}/freshcart-ecommerce`,
     {
       shippingAddress:orderInfo
     },
